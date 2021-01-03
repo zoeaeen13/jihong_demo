@@ -55,6 +55,23 @@ const ImageWrapper = styled.div`
     transition: 0.5s all ease;
   }
 
+  &::after {
+    content: "${(props) => props.title}";
+    color: ${(props) =>
+      props.isCurrent ? "white" : "transparent"};
+    position: absolute;
+    font-size: .95rem;
+    font-weight: bold;
+    left: .5vw;
+    top: .5vh;
+    z-index: 2;
+    transition: 0.5s all ease;
+
+    ${MEDIA_QUERY_MD} {
+      font-size: 12px;
+    }
+  }
+
   &:hover {
     &::before {
       background-color: rgba(0, 0, 0, 0.45);
@@ -89,7 +106,9 @@ const CarouselWrapper = styled.div`
   }
 `;
 
-const ImageList = ({ coverIndex, coverList, handleChangeImage }) => {
+
+
+const ImageList = ({ titleList, coverIndex, coverList, handleChangeImage }) => {
   const handleClick = (e) => {
     handleChangeImage(e.target.firstChild.alt);
   };
@@ -99,6 +118,7 @@ const ImageList = ({ coverIndex, coverList, handleChangeImage }) => {
         coverList.map((item, index) => (
           <ImageWrapper
             key={index}
+            title={titleList[index]}
             isCurrent={coverIndex === index}
             onClick={handleClick}
           >
@@ -109,18 +129,27 @@ const ImageList = ({ coverIndex, coverList, handleChangeImage }) => {
   );
 };
 ImageList.propTypes = {
+  titleList: PropTypes.array,
   coverList: PropTypes.array,
   handleChangeImage: PropTypes.func,
   coverIndex: PropTypes.number,
 };
 
-const Carousel = ({ carouselList }) => {
+const CarouselTitle = styled.div`
+text-align: center;
+padding-bottom: 10px;
+  font-size: 1.6rem;
+  color: #444444;
+  font-weight: bold;
+`
+const Carousel = ({ title, carouselList }) => {
   return (
     <CarouselWrapper
       id="carouselExampleIndicators"
       className="carousel slide"
       data-ride="carousel"
     >
+      <CarouselTitle>{title}</CarouselTitle>
       <ol className="carousel-indicators">
         <li
           data-target="#carouselExampleIndicators"
@@ -192,24 +221,30 @@ const Carousel = ({ carouselList }) => {
 };
 
 Carousel.propTypes = {
+  title: PropTypes.string,
   carouselList: PropTypes.array,
 };
 
-function Portfolio({ coverIndex, coverList, carouselList, handleChangeImage }) {
+
+function Portfolio({ titleList, coverIndex, coverList, carouselList, handleChangeImage }) {
   return (
     <PorfolioWrapper id="portfolio">
       <ImageList
+        titleList={titleList}
         coverIndex={coverIndex}
         coverList={coverList}
         handleChangeImage={handleChangeImage}
       />
-      <Carousel carouselList={carouselList} />
+      <div>
+        <Carousel title={titleList[coverIndex]} carouselList={carouselList} />
+      </div>
     </PorfolioWrapper>
   );
 }
 
 Portfolio.propTypes = {
   coverIndex: PropTypes.number,
+  titleList: PropTypes.array,
   coverList: PropTypes.array,
   carouselList: PropTypes.array,
   handleChangeImage: PropTypes.func,

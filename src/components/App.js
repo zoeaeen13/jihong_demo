@@ -22,6 +22,7 @@ function App() {
       <Banner />
       <Service />
       <Portfolio
+        titleList={PortfolioList.titleList}
         coverIndex={coverIndex}
         coverList={PortfolioList.coverList}
         carouselList={carouselList}

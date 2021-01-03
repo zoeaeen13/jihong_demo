@@ -2,18 +2,78 @@ import styled from "styled-components";
 import { MEDIA_QUERY_MD, MEDIA_QUERY_LG } from "../constants/style";
 
 const Section = styled.section`
-  padding: 5vh 5vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
   background: #f6f9f9;
+
+  ${MEDIA_QUERY_LG} {
+    flex-direction: column;
+  }
 `;
 
-const SectionTitle = styled.h2`
-  margin-left: 10vw;
-  font-weight: bold;
-  font-size: 2rem;
-  padding-left: 1rem;
-  border-left: 1rem solid #9dd3a8;
-  color: #222222;
-`;
+const AboutWrapper = styled.div`
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+position:relative;
+width: 50vw;
+height: 70vh;
+overflow: hidden;
+
+${MEDIA_QUERY_LG} {
+  width: 100vw;
+  height: 30vh;
+}
+
+&::before {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  content: "";
+  width: 50vw;
+  height:0;
+  margin:0 auto;
+  border-right: 45vh solid transparent;
+  border-bottom: 50vw solid rgba(150,206,180, .15);
+
+  ${MEDIA_QUERY_LG} {
+    display: none;
+  }
+}
+
+
+h3 {
+  color: #3d3d3d;
+  font-size: 36px;
+  font-weight: 800;
+  z-index: 10;
+
+  ${MEDIA_QUERY_MD} {
+    font-size: 24px;
+  }
+}
+
+p {
+  color: #444444;
+  margin: 20px 0;
+  text-align: left;
+  font-size: 24px;
+  font-weight: 600;
+  z-index: 10;
+
+  span {
+    font-size: 20px;
+    color: #8e8e8e;
+  }
+
+  ${MEDIA_QUERY_MD} {
+    font-size: 14px;
+  }
+}
+`
+
 
 const ServiceWrapper = styled.div`
   display: flex;
@@ -27,11 +87,10 @@ const ServiceWrapper = styled.div`
 
 const ServiceCard = styled.div`
   display: flex;
-  width: 30%;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
   border-radius: 6px;
+  margin: 20px;
   padding: 50px;
   background: white;
   transition: ease-in 0.2s all;
@@ -39,12 +98,9 @@ const ServiceCard = styled.div`
   cursor: pointer;
 
   ${MEDIA_QUERY_LG} {
-    width: 45%;
-  }
-
-  ${MEDIA_QUERY_MD} {
-    width: 75%;
-  }
+    margin: 20px 10px;
+    padding: 2rem;
+    }
 
   &:hover {
     transform: scale(1.02);
@@ -66,7 +122,10 @@ const ServiceCard = styled.div`
 function Service() {
   return (
     <Section id="service">
-      <SectionTitle>服務項目</SectionTitle>
+      <AboutWrapper>
+        <h3>我們的願景</h3>
+        <p>從事室內裝修 20 餘年，<br/>總是盡心盡力完成每一次的工程。<br/>因為我們知道，<br/>每個釘上的木板、每道漆上的油漆，<br/>都是為客戶實現對家的美好想像。<br/><span>– 創辦人 邱繼德</span></p>
+      </AboutWrapper>
       <ServiceWrapper>
         <ServiceCard>
           <h5>室內設計</h5>

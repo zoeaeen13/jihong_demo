@@ -30,6 +30,7 @@ import work6_4 from "../images/work6/4.jpg";
 import work6_5 from "../images/work6/5.jpg";
 
 export const PortfolioList = {
+  titleList: ['三重陳宅', '板橋張宅', '林口吳宅', '內壢林宅', '楊梅李宅', '內湖鍾宅'],
   coverList: [work1_1, work2_1, work3_1, work4_1, work5_1, work6_1],
   carouselList: [
     [work1_1, work1_2, work1_3, work1_4, work1_5],
