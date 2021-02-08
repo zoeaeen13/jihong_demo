@@ -5,7 +5,7 @@ const Section = styled.section`
   display: flex;
   justify-items: center;
   align-items: center;
-  background: #f6f9f9;
+  background: rgba(104,100,102, .1);
 
   ${MEDIA_QUERY_LG} {
     flex-direction: column;
@@ -21,6 +21,12 @@ position:relative;
 width: 50vw;
 height: 70vh;
 overflow: hidden;
+transition: ease-in 0.18s all;
+cursor: pointer;
+
+&:hover {
+  transform: scale(1.02);
+}
 
 ${MEDIA_QUERY_LG} {
   width: 100vw;
@@ -36,7 +42,7 @@ ${MEDIA_QUERY_LG} {
   height:0;
   margin:0 auto;
   border-right: 45vh solid transparent;
-  border-bottom: 50vw solid rgba(150,206,180, .15);
+  border-bottom: 50vw solid rgba(104,100,102, .65);
 
   ${MEDIA_QUERY_LG} {
     display: none;
@@ -45,9 +51,9 @@ ${MEDIA_QUERY_LG} {
 
 
 h3 {
-  color: #3d3d3d;
+  color: rgba(238,238,238, .65);
   font-size: 36px;
-  font-weight: 800;
+  font-weight: 600;
   z-index: 10;
 
   ${MEDIA_QUERY_MD} {
@@ -56,16 +62,19 @@ h3 {
 }
 
 p {
-  color: #444444;
+  color: #eeeeee;
   margin: 20px 0;
   text-align: left;
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 600;
   z-index: 10;
 
   span {
-    font-size: 20px;
-    color: #8e8e8e;
+    display: block;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 16px;
+    color: rgba(238,238,238, .8);
   }
 
   ${MEDIA_QUERY_MD} {
@@ -94,7 +103,7 @@ const ServiceCard = styled.div`
   padding: 50px;
   background: white;
   transition: ease-in 0.2s all;
-  box-shadow: 0px 2px 23px -4px #e0e0e0;
+  box-shadow: 0px 10px 23px -4px #e0e0e0;
   cursor: pointer;
 
   ${MEDIA_QUERY_LG} {
