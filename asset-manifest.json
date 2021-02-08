@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/jihong_demo/static/css/main.e9eefe75.chunk.css",
-    "main.js": "/jihong_demo/static/js/main.94a002a5.chunk.js",
-    "main.js.map": "/jihong_demo/static/js/main.94a002a5.chunk.js.map",
+    "main.js": "/jihong_demo/static/js/main.5f770e0b.chunk.js",
+    "main.js.map": "/jihong_demo/static/js/main.5f770e0b.chunk.js.map",
     "runtime-main.js": "/jihong_demo/static/js/runtime-main.5c1bb3c8.js",
     "runtime-main.js.map": "/jihong_demo/static/js/runtime-main.5c1bb3c8.js.map",
     "static/js/2.2490a617.chunk.js": "/jihong_demo/static/js/2.2490a617.chunk.js",
@@ -40,7 +40,7 @@
     "static/media/5.697f5495.jpg": "/jihong_demo/static/media/5.697f5495.jpg",
     "static/media/5.71dddddc.jpg": "/jihong_demo/static/media/5.71dddddc.jpg",
     "static/media/5.fa7d5cf9.jpg": "/jihong_demo/static/media/5.fa7d5cf9.jpg",
-    "static/media/QRcode.bb8b91ed.jpg": "/jihong_demo/static/media/QRcode.bb8b91ed.jpg",
+    "static/media/QRcode.1dfe9d65.jpg": "/jihong_demo/static/media/QRcode.1dfe9d65.jpg",
     "static/media/cover.4f1d19ca.jpg": "/jihong_demo/static/media/cover.4f1d19ca.jpg",
     "static/media/logo_white.3073a011.png": "/jihong_demo/static/media/logo_white.3073a011.png",
     "static/media/slogan.2c611cf5.png": "/jihong_demo/static/media/slogan.2c611cf5.png"
@@ -49,6 +49,6 @@
     "static/js/runtime-main.5c1bb3c8.js",
     "static/js/2.2490a617.chunk.js",
     "static/css/main.e9eefe75.chunk.css",
-    "static/js/main.94a002a5.chunk.js"
+    "static/js/main.5f770e0b.chunk.js"
   ]
 }
