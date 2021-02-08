@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/jihong_demo/static/css/main.e9eefe75.chunk.css",
-    "main.js": "/jihong_demo/static/js/main.28060c47.chunk.js",
-    "main.js.map": "/jihong_demo/static/js/main.28060c47.chunk.js.map",
+    "main.js": "/jihong_demo/static/js/main.afb01822.chunk.js",
+    "main.js.map": "/jihong_demo/static/js/main.afb01822.chunk.js.map",
     "runtime-main.js": "/jihong_demo/static/js/runtime-main.5c1bb3c8.js",
     "runtime-main.js.map": "/jihong_demo/static/js/runtime-main.5c1bb3c8.js.map",
     "static/js/2.2490a617.chunk.js": "/jihong_demo/static/js/2.2490a617.chunk.js",
@@ -49,6 +49,6 @@
     "static/js/runtime-main.5c1bb3c8.js",
     "static/js/2.2490a617.chunk.js",
     "static/css/main.e9eefe75.chunk.css",
-    "static/js/main.28060c47.chunk.js"
+    "static/js/main.afb01822.chunk.js"
   ]
 }
