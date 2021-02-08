@@ -45,7 +45,9 @@ ${MEDIA_QUERY_LG} {
   border-bottom: 50vw solid rgba(104,100,102, .65);
 
   ${MEDIA_QUERY_LG} {
-    display: none;
+    width: 100vw;
+    border: none;
+    padding: 20px;
   }
 }
 
@@ -55,6 +57,10 @@ h3 {
   font-size: 36px;
   font-weight: 600;
   z-index: 10;
+
+  ${MEDIA_QUERY_LG} {
+    color: #515151;
+  }
 
   ${MEDIA_QUERY_MD} {
     font-size: 24px;
@@ -69,12 +75,20 @@ p {
   font-weight: 600;
   z-index: 10;
 
+  ${MEDIA_QUERY_LG} {
+    color: #515151;
+  }
+
   span {
     display: block;
     margin-top: 20px;
     font-weight: 400;
     font-size: 16px;
     color: rgba(238,238,238, .8);
+
+    ${MEDIA_QUERY_LG} {
+      color: #444444;
+    }
   }
 
   ${MEDIA_QUERY_MD} {
