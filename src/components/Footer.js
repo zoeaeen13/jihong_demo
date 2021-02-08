@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import logo from "../images/logo_white.png";
-import code from "../images/QRcode.jpg";
+import qrcode from "../images/QRcode.jpg";
 import { FooterData } from "../data/Info";
 import { MEDIA_QUERY_MD, MEDIA_QUERY_LG } from "../constants/style";
 
@@ -110,7 +110,7 @@ function Footer() {
           <p>{FooterData.certification.value}</p>
         </div>
         <QRCodeWrapper>
-          <img src={code} alt="LineQRcode" />
+          <img src={qrcode} alt="LineQRcode" />
         </QRCodeWrapper>
       </FooterInfo>
     </FooterWrapper>
